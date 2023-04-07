@@ -27,3 +27,8 @@ class MenuNode(models.Model):
         on_delete=models.CASCADE,
         related_name='nodes',
     )
+
+
+    def __str__(self) -> str:
+        parent_name = self.parent_node.name if self.parent_node else None
+        return f'MenuNode(name="{self.name}", parent_node="{parent_name}")'
