@@ -1,0 +1,12 @@
+# IDE
+.vscode
+
+
+# Python
+.venv*/
+__pycache__
+
+
+# Django
+*.db
+*.sqlite3
