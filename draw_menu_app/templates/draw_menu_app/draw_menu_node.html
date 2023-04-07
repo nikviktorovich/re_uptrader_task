@@ -1,0 +1,11 @@
+{% load draw_menu_node %}
+<li>
+    <a href="{% url 'draw_menu' name %}">{{ readable_name }}</a>
+    {% if children %}
+        <ul>
+        {% for node_name in children %}
+            {% draw_menu_node node_name %}
+        {% endfor %}
+        </ul>
+    {% endif %}
+</li>

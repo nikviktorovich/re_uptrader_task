@@ -1,0 +1,6 @@
+{% load draw_menu_node %}
+<ul>
+{% for node_name in node_names %}
+    {% draw_menu_node node_name %}
+{% endfor %}
+</ul>
